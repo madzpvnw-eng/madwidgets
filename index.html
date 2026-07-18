@@ -3,10 +3,14 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MadWidgets</title>
+<title>madwidgets</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,14 +18,14 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Manrope',sans-serif;
 }
 
 body{
 
 background:#ffffff;
 
-padding:60px;
+padding:70px;
 
 }
 
@@ -35,7 +39,11 @@ margin-bottom:60px;
 
 h1{
 
-font-size:52px;
+font-size:44px;
+
+font-weight:800;
+
+letter-spacing:-1px;
 
 color:#703B3B;
 
@@ -43,11 +51,11 @@ margin-bottom:10px;
 
 }
 
-p{
-
-color:#777;
+header p{
 
 font-size:18px;
+
+color:#8a6a6a;
 
 }
 
@@ -55,43 +63,55 @@ font-size:18px;
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
 gap:25px;
+
+max-width:1100px;
+
+margin:auto;
 
 }
 
 .card{
 
+display:block;
+
+text-decoration:none;
+
 background:#F5EDE9;
 
-padding:25px;
+padding:28px;
 
-border-radius:20px;
+border-radius:22px;
 
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+color:#703B3B;
 
-transition:.3s;
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+transition:.25s;
 
 }
 
 .card:hover{
 
-transform:translateY(-6px);
+transform:translateY(-8px);
+
+box-shadow:0 18px 35px rgba(112,59,59,.12);
 
 }
 
 .icon{
 
-font-size:40px;
+font-size:42px;
 
-margin-bottom:15px;
+margin-bottom:18px;
 
 }
 
 .card h2{
 
-color:#703B3B;
+font-size:28px;
 
 margin-bottom:10px;
 
@@ -99,31 +119,11 @@ margin-bottom:10px;
 
 .card p{
 
-font-size:15px;
+font-size:16px;
 
-margin-bottom:20px;
+color:#8a6a6a;
 
-}
-
-a{
-
-display:inline-block;
-
-padding:10px 20px;
-
-background:#703B3B;
-
-color:white;
-
-text-decoration:none;
-
-border-radius:10px;
-
-}
-
-a:hover{
-
-opacity:.9;
+line-height:1.5;
 
 }
 
@@ -135,121 +135,67 @@ opacity:.9;
 
 <header>
 
-<h1>MadWidgets</h1>
+<h1>madwidgets</h1>
 
-<p>Beautiful widgets for Notion.</p>
+<p>Simple widgets for Notion.</p>
 
 </header>
 
 <div class="grid">
 
-<div class="card">
-
+<a href="clock/" class="card">
 <div class="icon">🕒</div>
-
 <h2>Clock</h2>
-
 <p>Live digital clock.</p>
+</a>
 
-<a href="clock/">Open</a>
-
-</div>
-
-<div class="card">
-
+<a href="analog-clock/" class="card">
 <div class="icon">🕘</div>
-
 <h2>Analog Clock</h2>
-
 <p>Minimal analog clock.</p>
+</a>
 
-<a href="analog-clock/">Open</a>
-
-</div>
-
-<div class="card">
-
+<a href="calendar/" class="card">
 <div class="icon">📅</div>
-
 <h2>Calendar</h2>
-
 <p>Monthly calendar.</p>
+</a>
 
-<a href="calendar/">Open</a>
-
-</div>
-
-<div class="card">
-
+<a href="countdown/" class="card">
 <div class="icon">⏳</div>
-
 <h2>Countdown</h2>
+<p>Countdown timer.</p>
+</a>
 
-<p>Simple countdown timer.</p>
-
-<a href="countdown/">Open</a>
-
-</div>
-
-<div class="card">
-
+<a href="pomodoro/" class="card">
 <div class="icon">🍅</div>
-
 <h2>Pomodoro</h2>
-
 <p>Focus timer.</p>
+</a>
 
-<a href="pomodoro/">Open</a>
-
-</div>
-
-<div class="card">
-
+<a href="quote/" class="card">
 <div class="icon">💬</div>
-
 <h2>Quote</h2>
+<p>Random inspirational quotes.</p>
+</a>
 
-<p>Random daily quotes.</p>
-
-<a href="quote/">Open</a>
-
-</div>
-
-<div class="card">
-
+<a href="progress-bar/" class="card">
 <div class="icon">📊</div>
-
 <h2>Progress Bar</h2>
+<p>Simple progress widget.</p>
+</a>
 
-<p>Beautiful progress widget.</p>
-
-<a href="progress-bar/">Open</a>
-
-</div>
-
-<div class="card">
-
+<a href="life-progress/" class="card">
 <div class="icon">📈</div>
-
 <h2>Life Progress</h2>
+<p>Track your life journey.</p>
+</a>
 
-<p>Track your life progress.</p>
-
-<a href="life-progress/">Open</a>
-
-</div>
-
-<div class="card">
-
+<a href="weather/" class="card">
 <div class="icon">🌤️</div>
-
 <h2>Weather</h2>
-
-<p>Weather widget.</p>
-
-<a href="weather/">Open</a>
-
-</div>
+<p>Current weather widget.</p>
+</a>
 
 </div>
 
