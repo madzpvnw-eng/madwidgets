@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Life Progress</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+height:100vh;
+
+background:#ffffff;
+
+}
+
+.card{
+
+width:360px;
+
+background:#F5EDE9;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+text-align:center;
+
+}
+
+h2{
+
+color:#703B3B;
+
+margin-bottom:20px;
+
+}
+
+input{
+
+width:100%;
+
+padding:12px;
+
+border:none;
+
+border-radius:10px;
+
+margin-bottom:20px;
+
+font-size:16px;
+
+}
+
+.age{
+
+font-size:28px;
+
+font-weight:bold;
+
+color:#703B3B;
+
+margin-bottom:20px;
+
+}
+
+.progress{
+
+width:100%;
+
+height:18px;
+
+background:#e5d7d1;
+
+border-radius:20px;
+
+overflow:hidden;
+
+margin-bottom:15px;
+
+}
+
+.fill{
+
+height:100%;
+
+width:0%;
+
+background:#703B3B;
+
+transition:.4s;
+
+}
+
+.percent{
+
+font-size:20px;
+
+color:#703B3B;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>Life Progress</h2>
+
+<input
+type="date"
+id="birthday"
+>
+
+<div class="age" id="age">
+
+Choose your birthday
+
+</div>
+
+<div class="progress">
+
+<div class="fill" id="fill"></div>
+
+</div>
+
+<div class="percent" id="percent">
+
+0%
+
+</div>
+
+</div>
+
+<script>
+
+const birthday=document.getElementById("birthday");
+
+birthday.addEventListener("change",calculate);
+
+function calculate(){
+
+const birth=new Date(birthday.value);
+
+const today=new Date();
+
+const age=(today-birth)/(1000*60*60*24*365.25);
+
+const progress=(age/80)*100;
+
+document.getElementById("age").innerHTML=
+age.toFixed(1)+" Years";
+
+document.getElementById("fill").style.width=
+Math.min(progress,100)+"%";
+
+document.getElementById("percent").innerHTML=
+progress.toFixed(1)+"% of 80 Years";
+
+}
+
+</script>
+
+</body>
+</html>
