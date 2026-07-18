@@ -1,117 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Clock Widget</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-
-background:#ffffff;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-height:100vh;
-
-font-family:Poppins,sans-serif;
-
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#F5EDE9;
+    font-family:Arial,sans-serif;
 }
 
-.widget{
-
-background:#F5EDE9;
-
-padding:35px;
-
-border-radius:24px;
-
-text-align:center;
-
-box-shadow:0 15px 40px rgba(0,0,0,.08);
-
+#clock{
+    font-size:48px;
+    font-weight:bold;
+    color:#703B3B;
 }
-
-#time{
-
-font-size:48px;
-
-font-weight:700;
-
-color:#703B3B;
-
-}
-
-#date{
-
-margin-top:10px;
-
-font-size:16px;
-
-color:#8f6f6f;
-
-}
-
 </style>
 
 </head>
-
 <body>
 
-<div class="widget">
-
-<div id="time"></div>
-
-<div id="date"></div>
-
-</div>
+<div id="clock"></div>
 
 <script>
-
 function updateClock(){
+    const now = new Date();
 
-const now=new Date();
-
-document.getElementById("time").innerHTML=
-now.toLocaleTimeString("en-GB");
-
-document.getElementById("date").innerHTML=
-now.toLocaleDateString("en-GB",{
-
-weekday:"long",
-
-day:"numeric",
-
-month:"long",
-
-year:"numeric"
-
-});
-
+    document.getElementById("clock").innerHTML =
+        now.toLocaleTimeString("id-ID");
 }
 
 updateClock();
-
 setInterval(updateClock,1000);
-
 </script>
 
 </body>
