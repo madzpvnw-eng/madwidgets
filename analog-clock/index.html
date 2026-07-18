@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Analog Clock</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+
+background:#ffffff;
+
+font-family:Arial,sans-serif;
+
+}
+
+.clock{
+
+position:relative;
+
+width:300px;
+height:300px;
+
+background:#F5EDE9;
+
+border-radius:50%;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+border:8px solid #F5EDE9;
+
+}
+
+.number{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+text-align:center;
+
+font-size:24px;
+
+font-weight:bold;
+
+color:#703B3B;
+
+}
+
+.number span{
+
+display:inline-block;
+
+transform:translateY(15px);
+
+}
+
+.number1{transform:rotate(30deg);}
+.number1 span{transform:rotate(-30deg);}
+
+.number2{transform:rotate(60deg);}
+.number2 span{transform:rotate(-60deg);}
+
+.number3{transform:rotate(90deg);}
+.number3 span{transform:rotate(-90deg);}
+
+.number4{transform:rotate(120deg);}
+.number4 span{transform:rotate(-120deg);}
+
+.number5{transform:rotate(150deg);}
+.number5 span{transform:rotate(-150deg);}
+
+.number6{transform:rotate(180deg);}
+.number6 span{transform:rotate(-180deg);}
+
+.number7{transform:rotate(210deg);}
+.number7 span{transform:rotate(-210deg);}
+
+.number8{transform:rotate(240deg);}
+.number8 span{transform:rotate(-240deg);}
+
+.number9{transform:rotate(270deg);}
+.number9 span{transform:rotate(-270deg);}
+
+.number10{transform:rotate(300deg);}
+.number10 span{transform:rotate(-300deg);}
+
+.number11{transform:rotate(330deg);}
+.number11 span{transform:rotate(-330deg);}
+
+.hand{
+
+position:absolute;
+
+bottom:50%;
+
+left:50%;
+
+transform-origin:bottom;
+
+transform:translateX(-50%) rotate(0deg);
+
+border-radius:10px;
+
+}
+
+.hour{
+
+width:8px;
+height:70px;
+
+background:#703B3B;
+
+}
+
+.minute{
+
+width:5px;
+height:95px;
+
+background:#703B3B;
+
+}
+
+.second{
+
+width:2px;
+height:110px;
+
+background:#C88A8A;
+
+}
+
+.center{
+
+position:absolute;
+
+width:16px;
+height:16px;
+
+background:#703B3B;
+
+border-radius:50%;
+
+top:50%;
+left:50%;
+
+transform:translate(-50%,-50%);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="clock">
+
+<div class="number number1"><span>1</span></div>
+<div class="number number2"><span>2</span></div>
+<div class="number number3"><span>3</span></div>
+<div class="number number4"><span>4</span></div>
+<div class="number number5"><span>5</span></div>
+<div class="number number6"><span>6</span></div>
+<div class="number number7"><span>7</span></div>
+<div class="number number8"><span>8</span></div>
+<div class="number number9"><span>9</span></div>
+<div class="number number10"><span>10</span></div>
+<div class="number number11"><span>11</span></div>
+<div class="number"><span>12</span></div>
+
+<div class="hand hour" id="hour"></div>
+
+<div class="hand minute" id="minute"></div>
+
+<div class="hand second" id="second"></div>
+
+<div class="center"></div>
+
+</div>
+
+<script>
+
+const hour=document.getElementById("hour");
+const minute=document.getElementById("minute");
+const second=document.getElementById("second");
+
+function updateClock(){
+
+const now=new Date();
+
+const h=now.getHours()%12;
+
+const m=now.getMinutes();
+
+const s=now.getSeconds();
+
+const hourDeg=(h*30)+(m/2);
+
+const minuteDeg=(m*6)+(s*0.1);
+
+const secondDeg=s*6;
+
+hour.style.transform=`translateX(-50%) rotate(${hourDeg}deg)`;
+
+minute.style.transform=`translateX(-50%) rotate(${minuteDeg}deg)`;
+
+second.style.transform=`translateX(-50%) rotate(${secondDeg}deg)`;
+
+}
+
+updateClock();
+
+setInterval(updateClock,1000);
+
+</script>
+
+</body>
+</html>
