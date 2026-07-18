@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Widget</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+
+background:#ffffff;
+
+font-family:Arial,sans-serif;
+
+}
+
+.card{
+
+background:#F5EDE9;
+
+padding:30px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+width:260px;
+
+}
+
+.icon{
+
+font-size:60px;
+
+margin-bottom:10px;
+
+}
+
+.temp{
+
+font-size:42px;
+
+font-weight:bold;
+
+color:#703B3B;
+
+}
+
+.city{
+
+margin-top:10px;
+
+font-size:22px;
+
+font-weight:bold;
+
+color:#703B3B;
+
+}
+
+.desc{
+
+margin-top:8px;
+
+color:#777;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="icon" id="icon">☀️</div>
+
+<div class="temp" id="temp">--°C</div>
+
+<div class="city">Bandung</div>
+
+<div class="desc" id="desc">Loading...</div>
+
+</div>
+
+<script>
+
+fetch("https://wttr.in/Bandung?format=j1")
+
+.then(res=>res.json())
+
+.then(data=>{
+
+const temp=data.current_condition[0].temp_C;
+
+const weather=data.current_condition[0].weatherDesc[0].value;
+
+document.getElementById("temp").innerHTML=temp+"°C";
+
+document.getElementById("desc").innerHTML=weather;
+
+if(weather.toLowerCase().includes("sun")){
+
+document.getElementById("icon").innerHTML="☀️";
+
+}
+
+else if(weather.toLowerCase().includes("cloud")){
+
+document.getElementById("icon").innerHTML="☁️";
+
+}
+
+else if(weather.toLowerCase().includes("rain")){
+
+document.getElementById("icon").innerHTML="🌧️";
+
+}
+
+else{
+
+document.getElementById("icon").innerHTML="🌤️";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
