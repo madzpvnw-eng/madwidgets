@@ -12,7 +12,7 @@ body{
     align-items:center;
     height:100vh;
     background:#FFFFFF;
-    color:white;
+    color:#000000;
     font-family:Arial,sans-serif;
 }
 
@@ -23,11 +23,13 @@ body{
 #time{
     font-size:64px;
     font-weight:bold;
+    color:#000000;
 }
 
 #date{
     margin-top:10px;
     color:#703B3B;
+    font-size:18px;
 }
 </style>
 
@@ -44,7 +46,11 @@ function updateClock(){
     const now = new Date();
 
     document.getElementById("time").textContent =
-        now.toLocaleTimeString("id-ID");
+        now.toLocaleTimeString("id-ID",{
+            hour:'2-digit',
+            minute:'2-digit',
+            second:'2-digit'
+        });
 
     document.getElementById("date").textContent =
         now.toLocaleDateString("id-ID",{
