@@ -190,48 +190,93 @@ body{
     margin-bottom:25px;
 
 }
-
 /* ========================================
-   PRAYER
+   PRAYER CARD
 ======================================== */
 
-.prayer{
+.prayer-card{
 
     display:flex;
 
-    justify-content:space-between;
+    flex-direction:column;
 
     align-items:center;
 
+    text-align:center;
+
+    gap:10px;
+
 }
+
+/* ---------- LOCATION ---------- */
+
+.location{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:6px;
+
+    font-size:13px;
+
+    color:#A8A8A8;
+
+}
+
+.location-icon{
+
+    font-size:14px;
+
+}
+
+/* ---------- PRAYER INFO ---------- */
 
 .prayer-info{
 
     display:flex;
 
+    flex-direction:column;
+
     align-items:center;
 
-    gap:8px;
-
-    font-size:18px;
-
-    font-weight:600;
+    gap:6px;
 
 }
 
-.icon{
+.prayer-name{
 
-    font-size:20px;
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#F4D4A4;
 
 }
+
+/* ---------- COUNTDOWN ---------- */
 
 .countdown{
 
-    font-size:18px;
+    width:100%;
 
-    font-weight:bold;
+}
 
-    color:#F4D4A4;
+.countdown span{
+
+    display:block;
+
+    text-align:center;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    color:#FFFFFF;
 
 }
 

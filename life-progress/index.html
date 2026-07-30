@@ -1,183 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Life Progress</title>
+    <meta charset="UTF-8">
 
-<style>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+    <title>Life Progress</title>
 
-body{
+    <!-- Google Font -->
 
-display:flex;
-justify-content:center;
-align-items:center;
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-height:100vh;
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-background:#ffffff;
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
-}
+    <!-- Lucide -->
 
-.card{
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-width:360px;
+    <!-- Theme -->
 
-background:#F5EDE9;
+    <link rel="stylesheet"
+          href="../assets/css/theme.css">
 
-padding:30px;
+    <!-- Widget -->
 
-border-radius:20px;
-
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-text-align:center;
-
-}
-
-h2{
-
-color:#703B3B;
-
-margin-bottom:20px;
-
-}
-
-input{
-
-width:100%;
-
-padding:12px;
-
-border:none;
-
-border-radius:10px;
-
-margin-bottom:20px;
-
-font-size:16px;
-
-}
-
-.age{
-
-font-size:28px;
-
-font-weight:bold;
-
-color:#703B3B;
-
-margin-bottom:20px;
-
-}
-
-.progress{
-
-width:100%;
-
-height:18px;
-
-background:#e5d7d1;
-
-border-radius:20px;
-
-overflow:hidden;
-
-margin-bottom:15px;
-
-}
-
-.fill{
-
-height:100%;
-
-width:0%;
-
-background:#703B3B;
-
-transition:.4s;
-
-}
-
-.percent{
-
-font-size:20px;
-
-color:#703B3B;
-
-}
-
-</style>
+    <link rel="stylesheet"
+          href="style.css">
 
 </head>
 
 <body>
 
-<div class="card">
+    <main class="life-progress">
 
-<h2>Life Progress</h2>
+        <!-- Theme -->
 
-<input
-type="date"
-id="birthday"
->
+        <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle Theme">
+        </button>
 
-<div class="age" id="age">
+        <!-- Title -->
 
-Choose your birthday
+        <h1 class="title">
 
-</div>
+            <i data-lucide="hourglass"></i>
 
-<div class="progress">
+            <span>Life Progress</span>
 
-<div class="fill" id="fill"></div>
+        </h1>
 
-</div>
+        <!-- Dashboard -->
 
-<div class="percent" id="percent">
+        <section class="dashboard">
 
-0%
+            <div
+                id="age"
+                class="age">
 
-</div>
+                -- Years Old
 
-</div>
+            </div>
 
-<script>
+            <div class="progress">
 
-const birthday=document.getElementById("birthday");
+                <div
+                    id="progressBar"
+                    class="progress-bar">
 
-birthday.addEventListener("change",calculate);
+                </div>
 
-function calculate(){
+            </div>
 
-const birth=new Date(birthday.value);
+            <div
+                id="progressPercent"
+                class="percent">
 
-const today=new Date();
+                0%
 
-const age=(today-birth)/(1000*60*60*24*365.25);
+            </div>
 
-const progress=(age/80)*100;
+        </section>
 
-document.getElementById("age").innerHTML=
-age.toFixed(1)+" Years";
+        <!-- Information -->
 
-document.getElementById("fill").style.width=
-Math.min(progress,100)+"%";
+        <section class="info">
 
-document.getElementById("percent").innerHTML=
-progress.toFixed(1)+"% of 80 Years";
+            <div class="card">
 
-}
+                <i data-lucide="cake"></i>
 
-</script>
+                <div>
+
+                    <small>Birthday</small>
+
+                    <strong id="birthdayText">
+
+                        -
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <i data-lucide="calendar-range"></i>
+
+                <div>
+
+                    <small>Lifespan</small>
+
+                    <strong id="lifespanText">
+
+                        100 Years
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <i data-lucide="clock-3"></i>
+
+                <div>
+
+                    <small>Remaining</small>
+
+                    <strong id="remainingText">
+
+                        -
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Form -->
+
+        <section class="editor">
+
+            <label>
+
+                Birthday
+
+                <input
+                    id="birthdayInput"
+                    type="date">
+
+            </label>
+
+            <label>
+
+                Lifespan
+
+                <input
+                    id="lifespanInput"
+                    type="number"
+                    value="100"
+                    min="1"
+                    max="150">
+
+            </label>
+
+            <div class="buttons">
+
+                <button id="saveBtn">
+
+                    Save
+
+                </button>
+
+                <button id="editBtn">
+
+                    Edit
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Theme -->
+
+    <script src="../assets/js/theme.js"></script>
+
+    <!-- Widget -->
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>

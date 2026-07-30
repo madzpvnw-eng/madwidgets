@@ -1,183 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Quote Generator</title>
+    <meta charset="UTF-8">
 
-<style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+    <title>MadWidgets • Quote</title>
 
-body{
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-background:#ffffff;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-.card{
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-width:360px;
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-background:#F5EDE9;
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-padding:35px;
-
-border-radius:20px;
-
-text-align:center;
-
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-}
-
-.icon{
-
-font-size:40px;
-
-margin-bottom:20px;
-
-}
-
-.quote{
-
-font-size:22px;
-
-color:#703B3B;
-
-line-height:1.6;
-
-margin-bottom:20px;
-
-min-height:120px;
-
-}
-
-.author{
-
-font-size:16px;
-
-color:#8a5a5a;
-
-margin-bottom:30px;
-
-}
-
-button{
-
-padding:12px 24px;
-
-background:#703B3B;
-
-color:white;
-
-border:none;
-
-border-radius:12px;
-
-font-size:16px;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-button:hover{
-
-opacity:.85;
-
-}
-
-</style>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="card">
+    <div class="card">
 
-<div class="icon">💬</div>
+        <div class="icon">
 
-<div class="quote" id="quote"></div>
+            <i data-lucide="quote"></i>
 
-<div class="author" id="author"></div>
+        </div>
 
-<button onclick="newQuote()">
-New Quote
-</button>
+        <p class="quote" id="quote"></p>
 
-</div>
+        <p class="author" id="author"></p>
 
-<script>
+        <button id="new-quote">
 
-const quotes=[
+            New Quote
 
-{
-text:"Success is the sum of small efforts repeated day after day.",
-author:"Robert Collier"
-},
+        </button>
 
-{
-text:"Dream big and dare to fail.",
-author:"Norman Vaughan"
-},
+    </div>
 
-{
-text:"Don't watch the clock; do what it does. Keep going.",
-author:"Sam Levenson"
-},
-
-{
-text:"The future depends on what you do today.",
-author:"Mahatma Gandhi"
-},
-
-{
-text:"Stay hungry. Stay foolish.",
-author:"Steve Jobs"
-},
-
-{
-text:"Small progress is still progress.",
-author:"MadWidgets"
-},
-
-{
-text:"Discipline beats motivation.",
-author:"Unknown"
-},
-
-{
-text:"Your only limit is your mind.",
-author:"Unknown"
-}
-
-];
-
-function newQuote(){
-
-const random=Math.floor(Math.random()*quotes.length);
-
-document.getElementById("quote").innerHTML=
-`"${quotes[random].text}"`;
-
-document.getElementById("author").innerHTML=
-"— "+quotes[random].author;
-
-}
-
-newQuote();
-
-</script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>

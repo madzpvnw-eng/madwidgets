@@ -1,69 +1,76 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Jam Gagasan</title>
 
-<style>
-body{
-    margin:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    background:#FFFFFF;
-    color:#703B3B;
-    font-family:Arial,sans-serif;
-}
+    <meta charset="UTF-8">
 
-.clock{
-    text-align:center;
-}
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-#time{
-    font-size:64px;
-    font-weight:bold;
-    color:#703B3B;
-}
+    <title>Clock</title>
 
-#date{
-    margin-top:10px;
-    color:#703B3B;
-    font-size:18px;
-}
-</style>
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Global Theme -->
+
+    <link rel="stylesheet"
+          href="../assets/css/theme.css">
+
+    <!-- Widget Style -->
+
+    <link rel="stylesheet"
+          href="style.css">
 
 </head>
+
 <body>
 
-<div class="clock">
-    <div id="time"></div>
-    <div id="date"></div>
-</div>
+    <main class="clock">
 
-<script>
-function updateClock(){
-    const now = new Date();
+        <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle Theme">
 
-    document.getElementById("time").textContent =
-        now.toLocaleTimeString("id-ID",{
-            hour:'2-digit',
-            minute:'2-digit',
-            second:'2-digit'
-        });
+        </button>
 
-    document.getElementById("date").textContent =
-        now.toLocaleDateString("id-ID",{
-            weekday:"long",
-            day:"numeric",
-            month:"long",
-            year:"numeric"
-        });
-}
+        <div
+            id="time"
+            class="time">
 
-updateClock();
-setInterval(updateClock,1000);
-</script>
+            00:00:00
+
+        </div>
+
+        <div
+            id="date"
+            class="date">
+
+            Monday, 1 January 2026
+
+        </div>
+
+    </main>
+
+    <!-- Global Theme -->
+
+    <script src="../assets/js/theme.js"></script>
+
+    <!-- Widget Script -->
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>

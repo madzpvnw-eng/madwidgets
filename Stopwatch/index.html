@@ -8,7 +8,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Pomodoro</title>
+    <title>Stopwatch</title>
 
     <!-- Google Font -->
 
@@ -22,16 +22,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
           rel="stylesheet">
 
-    <!-- Lucide Icons -->
+    <!-- Lucide -->
 
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Global Theme -->
+    <!-- Theme -->
 
     <link rel="stylesheet"
           href="../assets/css/theme.css">
 
-    <!-- Widget Style -->
+    <!-- Widget -->
 
     <link rel="stylesheet"
           href="style.css">
@@ -40,7 +40,7 @@
 
 <body>
 
-    <main class="pomodoro">
+    <main class="stopwatch">
 
         <!-- Theme -->
 
@@ -48,7 +48,6 @@
             id="theme-toggle"
             class="theme-toggle"
             aria-label="Toggle Theme">
-
         </button>
 
         <!-- Title -->
@@ -57,41 +56,17 @@
 
             <i data-lucide="timer"></i>
 
-            <span>Focus</span>
+            <span>Stopwatch</span>
 
         </h1>
 
-        <!-- Duration -->
-
-        <div class="duration">
-
-            <button id="minus">
-
-                <i data-lucide="minus"></i>
-
-            </button>
-
-            <span id="minutes">
-
-                25 min
-
-            </span>
-
-            <button id="plus">
-
-                <i data-lucide="plus"></i>
-
-            </button>
-
-        </div>
-
-        <!-- Timer -->
+        <!-- Time -->
 
         <div
-            id="timer"
-            class="timer">
+            id="display"
+            class="display">
 
-            25:00
+            00:00:00.00
 
         </div>
 
@@ -100,28 +75,38 @@
         <div class="controls">
 
             <button
-                id="start"
-                aria-label="Start">
+                id="startBtn"
+                class="control-btn">
 
                 <i data-lucide="play"></i>
 
             </button>
 
             <button
-                id="pause"
-                aria-label="Pause">
+                id="pauseBtn"
+                class="control-btn">
 
                 <i data-lucide="pause"></i>
 
             </button>
 
             <button
-                id="reset"
-                aria-label="Reset">
+                id="resetBtn"
+                class="control-btn">
 
                 <i data-lucide="rotate-ccw"></i>
 
             </button>
+
+        </div>
+
+        <!-- Status -->
+
+        <div
+            id="status"
+            class="status">
+
+            Ready
 
         </div>
 

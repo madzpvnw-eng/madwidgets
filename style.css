@@ -1,0 +1,283 @@
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container {
+
+    width: min(1200px, calc(100% - 40px));
+
+    margin: 0 auto;
+
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header {
+
+    padding: 32px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    background: var(--bg);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+}
+
+.header .container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.logo h1 {
+
+    font-size: 2rem;
+
+    font-weight: 800;
+
+    color: var(--text);
+
+}
+
+.logo p {
+
+    margin-top: 6px;
+
+    color: var(--text-secondary);
+
+    font-size: .95rem;
+
+}
+
+/* ==========================================
+   THEME BUTTON
+========================================== */
+
+.theme-toggle {
+
+    width: 48px;
+
+    height: 48px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: all var(--transition);
+
+}
+
+.theme-toggle:hover {
+
+    background: var(--hover);
+
+}
+
+.theme-toggle svg {
+
+    width: 20px;
+
+    height: 20px;
+
+}
+
+/* ==========================================
+   MAIN
+========================================== */
+
+.main {
+
+    padding: 48px 0 80px;
+
+}
+
+/* ==========================================
+   CATEGORY
+========================================== */
+
+.category:not(:last-child) {
+
+    margin-bottom: 56px;
+
+}
+
+.category h2 {
+
+    font-size: 1.5rem;
+
+    margin-bottom: 20px;
+
+    color: var(--text);
+
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.widget-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 24px;
+
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.widget-card {
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    padding: 24px;
+
+    transition: all var(--transition);
+
+    box-shadow: var(--shadow);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+.widget-card:hover {
+
+    transform: translateY(-4px);
+
+    background: var(--hover);
+
+}
+
+.widget-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 14px;
+
+    background: var(--bg);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.widget-icon svg {
+
+    width: 26px;
+
+    height: 26px;
+
+}
+
+.widget-card h3 {
+
+    font-size: 1.1rem;
+
+    color: var(--text);
+
+}
+
+.widget-card p {
+
+    color: var(--text-secondary);
+
+    line-height: 1.6;
+
+    flex: 1;
+
+}
+
+.widget-card a {
+
+    margin-top: auto;
+
+    font-weight: 700;
+
+    color: var(--text);
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+
+    border-top: 1px solid var(--border);
+
+    padding: 28px 0;
+
+}
+
+.footer p {
+
+    text-align: center;
+
+    color: var(--text-secondary);
+
+    font-size: .9rem;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:768px) {
+
+    .header .container {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+
+    }
+
+    .main {
+
+        padding-top: 36px;
+
+    }
+
+}

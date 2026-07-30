@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Flip Clock</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Lucide -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Theme -->
+
+    <link rel="stylesheet"
+          href="../assets/css/theme.css">
+
+    <!-- Widget -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <main class="flip-clock">
+
+        <!-- Theme Toggle -->
+
+        <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle Theme">
+
+        </button>
+
+        <!-- Title -->
+
+        <h1 class="title">
+
+            <i data-lucide="clock-3"></i>
+
+            <span>Flip Clock</span>
+
+        </h1>
+
+        <!-- Clock -->
+
+        <section class="clock">
+
+            <!-- Hour -->
+
+            <div
+                class="flip-card"
+                id="hourCard">
+
+                <div class="top">
+
+                    <span id="hourTop">
+
+                        00
+
+                    </span>
+
+                </div>
+
+                <div class="middle"></div>
+
+                <div class="bottom">
+
+                    <span id="hourBottom">
+
+                        00
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- Minute -->
+
+            <div
+                class="flip-card"
+                id="minuteCard">
+
+                <div class="top">
+
+                    <span id="minuteTop">
+
+                        00
+
+                    </span>
+
+                </div>
+
+                <div class="middle"></div>
+
+                <div class="bottom">
+
+                    <span id="minuteBottom">
+
+                        00
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Day -->
+
+        <div
+            id="day"
+            class="day">
+
+            Monday
+
+        </div>
+
+        <!-- Date -->
+
+        <div
+            id="date"
+            class="date">
+
+            01 January 2026
+
+        </div>
+
+    </main>
+
+    <!-- Theme -->
+
+    <script src="../assets/js/theme.js"></script>
+
+    <!-- Widget -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

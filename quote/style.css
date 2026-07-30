@@ -1,0 +1,159 @@
+/* ==========================================
+   THEME
+========================================== */
+
+:root{
+
+    --bg:#FFFFFF;
+
+    --surface:#F7F7F5;
+
+    --text:#37352F;
+
+    --text-secondary:#787774;
+
+    --border:#E9E9E7;
+
+    --hover:#F1F1EF;
+
+    --shadow:0 8px 24px rgba(15,15,15,.05);
+
+    --radius:20px;
+
+    --transition:.25s ease;
+
+}
+
+[data-theme="dark"]{
+
+    --bg:#191919;
+
+    --surface:#2F2F2F;
+
+    --text:#EDEDED;
+
+    --text-secondary:#9B9A97;
+
+    --border:#3F3F3F;
+
+    --hover:#373737;
+
+    --shadow:0 8px 24px rgba(0,0,0,.35);
+
+}
+
+/* ========================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:'Manrope',sans-serif;
+
+    background:var(--bg);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+}
+
+.card{
+
+    width:360px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:32px;
+
+    text-align:center;
+
+}
+
+.icon{
+
+    margin-bottom:24px;
+
+}
+
+.icon svg{
+
+    width:42px;
+
+    height:42px;
+
+    stroke:var(--text);
+
+}
+
+.quote{
+
+    color:var(--text);
+
+    font-size:22px;
+
+    line-height:1.6;
+
+    min-height:120px;
+
+    margin-bottom:20px;
+
+}
+
+.author{
+
+    color:var(--text-secondary);
+
+    margin-bottom:28px;
+
+    font-size:16px;
+
+}
+
+button{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:14px;
+
+    cursor:pointer;
+
+    background:var(--text);
+
+    color:var(--bg);
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    opacity:.9;
+
+}

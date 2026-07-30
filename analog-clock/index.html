@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Analog Clock</title>
+    <title>MadWidgets • Analog Clock</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -19,14 +19,16 @@
 
         <!-- ==========================
              HEADER
-        =========================== -->
+        ========================== -->
 
         <div class="header">
 
             <div class="clock-circle">
 
                 <div id="hour" class="hand hour"></div>
+
                 <div id="minute" class="hand minute"></div>
+
                 <div id="second" class="hand second"></div>
 
                 <div class="center-dot"></div>
@@ -37,7 +39,7 @@
 
         <!-- ==========================
              DIGITAL CLOCK
-        =========================== -->
+        ========================== -->
 
         <div class="time">
 
@@ -55,9 +57,9 @@
 
         <!-- ==========================
              DATE
-        =========================== -->
+        ========================== -->
 
-        <div class="date" id="date">
+        <div id="date" class="date">
 
             Minggu, 19 Juli 2026
 
@@ -65,31 +67,44 @@
 
         <!-- ==========================
              DIVIDER
-        =========================== -->
+        ========================== -->
 
         <div class="divider"></div>
 
         <!-- ==========================
-             NEXT PRAYER
-        =========================== -->
+             PRAYER CARD
+        ========================== -->
 
-        <div class="prayer">
+        <div class="prayer-card">
+
+            <!-- Location -->
+
+            <div class="location">
+                <span class="location-icon">📍</span>
+                <span id="location-name">Memuat lokasi...</span>
+            </div>
+
+            <!-- Prayer -->
 
             <div class="prayer-info">
 
-                <span class="icon">🕌</span>
+                <div id="prayer-name" class="prayer-name">
 
-                <span id="prayer-name">
+                    🕌 -
 
-                    Dzuhur
-
-                </span>
+                </div>
 
             </div>
 
-            <div class="countdown" id="countdown">
+            <!-- Countdown -->
 
-                00 : 08 : 00
+            <div class="countdown">
+
+                <span id="countdown">
+
+                    -- : -- : --
+
+                </span>
 
             </div>
 

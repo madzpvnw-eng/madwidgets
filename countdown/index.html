@@ -1,190 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Countdown Widget</title>
+    <meta charset="UTF-8">
 
-<style>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    <title>Countdown</title>
 
-body{
+    <!-- Google Font -->
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-    background:#ffffff;
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-    font-family:Arial,sans-serif;
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
-}
+    <!-- Lucide -->
 
-.container{
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-    text-align:center;
+    <!-- Theme -->
 
-}
+    <link rel="stylesheet"
+          href="../assets/css/theme.css">
 
-h1{
+    <!-- Widget -->
 
-    color:#703B3B;
-    margin-bottom:30px;
-    letter-spacing:3px;
-    font-size:34px;
-
-}
-
-.countdown{
-
-    display:flex;
-    gap:20px;
-    justify-content:center;
-
-}
-
-.box{
-
-    width:100px;
-
-}
-
-.number{
-
-    background:#F5EDE9;
-
-    color:#703B3B;
-
-    font-size:42px;
-
-    font-weight:bold;
-
-    border-radius:18px;
-
-    height:95px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-    position:relative;
-
-}
-
-.number::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    right:0;
-
-    top:50%;
-
-    border-top:2px solid rgba(112,59,59,.15);
-
-}
-
-.label{
-
-    margin-top:12px;
-
-    color:#703B3B;
-
-    font-size:13px;
-
-    font-weight:bold;
-
-    letter-spacing:1px;
-
-}
-
-</style>
+    <link rel="stylesheet"
+          href="style.css">
 
 </head>
 
 <body>
 
-<div class="container">
+    <main class="countdown">
 
-<h1>COMING SOON</h1>
+        <!-- Theme Toggle -->
 
-<div class="countdown">
+        <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle Theme">
 
-<div class="box">
-<div class="number" id="days">00</div>
-<div class="label">DAYS</div>
-</div>
+        </button>
 
-<div class="box">
-<div class="number" id="hours">00</div>
-<div class="label">HOURS</div>
-</div>
+        <!-- Title -->
 
-<div class="box">
-<div class="number" id="minutes">00</div>
-<div class="label">MINUTES</div>
-</div>
+        <h1 class="title">
 
-<div class="box">
-<div class="number" id="seconds">00</div>
-<div class="label">SECONDS</div>
-</div>
+            <i data-lucide="hourglass"></i>
 
-</div>
+            <span>Countdown</span>
 
-</div>
+        </h1>
 
-<script>
+        <!-- Form -->
 
-const targetDate = new Date("January 1, 2027 00:00:00").getTime();
+        <section class="form">
 
-function updateCountdown(){
+            <div class="field">
 
-    const now = new Date().getTime();
+                <label for="eventName">
 
-    const distance = targetDate - now;
+                    <i data-lucide="party-popper"></i>
 
-    const days = Math.floor(distance/(1000*60*60*24));
+                    Event
 
-    const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+                </label>
 
-    const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+                <input
+                    type="text"
+                    id="eventName"
+                    placeholder="My Birthday">
 
-    const seconds = Math.floor((distance%(1000*60))/1000);
+            </div>
 
-    document.getElementById("days").textContent =
-    String(days).padStart(2,"0");
+            <div class="row">
 
-    document.getElementById("hours").textContent =
-    String(hours).padStart(2,"0");
+                <div class="field">
 
-    document.getElementById("minutes").textContent =
-    String(minutes).padStart(2,"0");
+                    <label for="targetDate">
 
-    document.getElementById("seconds").textContent =
-    String(seconds).padStart(2,"0");
+                        <i data-lucide="calendar"></i>
 
-}
+                        Date
 
-updateCountdown();
+                    </label>
 
-setInterval(updateCountdown,1000);
+                    <input
+                        type="date"
+                        id="targetDate">
 
-</script>
+                </div>
+
+                <div class="field">
+
+                    <label for="targetTime">
+
+                        <i data-lucide="clock-3"></i>
+
+                        Time
+
+                    </label>
+
+                    <input
+                        type="time"
+                        id="targetTime">
+
+                </div>
+
+            </div>
+
+            <button
+                id="applyButton"
+                class="apply-button">
+
+                Apply Countdown
+
+            </button>
+
+        </section>
+
+        <!-- Event Title -->
+
+        <h2
+            id="eventTitle"
+            class="event-title">
+
+            Event Name
+
+        </h2>
+
+        <!-- Countdown -->
+
+        <section class="countdown-grid">
+
+            <div class="flip-card">
+
+                <div
+                    class="number"
+                    id="days">
+
+                    000
+
+                </div>
+
+                <div class="label">
+
+                    Days
+
+                </div>
+
+            </div>
+
+            <div class="flip-card">
+
+                <div
+                    class="number"
+                    id="hours">
+
+                    00
+
+                </div>
+
+                <div class="label">
+
+                    Hours
+
+                </div>
+
+            </div>
+
+            <div class="flip-card">
+
+                <div
+                    class="number"
+                    id="minutes">
+
+                    00
+
+                </div>
+
+                <div class="label">
+
+                    Minutes
+
+                </div>
+
+            </div>
+
+            <div class="flip-card">
+
+                <div
+                    class="number"
+                    id="seconds">
+
+                    00
+
+                </div>
+
+                <div class="label">
+
+                    Seconds
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Theme -->
+
+    <script src="../assets/js/theme.js"></script>
+
+    <!-- Widget -->
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>

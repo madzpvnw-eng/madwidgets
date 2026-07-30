@@ -1,0 +1,325 @@
+/* ==========================
+   ROOT
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:"Manrope",sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:20px;
+
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.life-progress{
+
+    width:100%;
+
+    max-width:380px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:24px;
+
+    box-shadow:var(--shadow);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+    position:relative;
+
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+.title{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    font-size:1.3rem;
+
+    font-weight:700;
+
+}
+
+.title svg{
+
+    width:22px;
+
+    height:22px;
+
+}
+
+/* ==========================
+   AGE
+========================== */
+
+.age{
+
+    text-align:center;
+
+    font-size:2rem;
+
+    font-weight:800;
+
+}
+
+/* ==========================
+   PROGRESS
+========================== */
+
+.progress{
+
+    width:100%;
+
+    height:12px;
+
+    background:var(--border);
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+.progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    background:var(--accent);
+
+    border-radius:999px;
+
+    transition:.5s;
+
+}
+
+.percent{
+
+    text-align:center;
+
+    font-size:.95rem;
+
+    font-weight:700;
+
+    opacity:.8;
+
+}
+
+/* ==========================
+   INFO
+========================== */
+
+.info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:14px;
+
+    border-radius:16px;
+
+    background:var(--surface);
+
+}
+
+.card svg{
+
+    width:22px;
+
+    height:22px;
+
+}
+
+.card div{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.card small{
+
+    font-size:.75rem;
+
+    opacity:.65;
+
+}
+
+.card strong{
+
+    font-size:.95rem;
+
+}
+
+/* ==========================
+   EDITOR
+========================== */
+
+.editor{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.editor label{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+}
+
+.editor input{
+
+    width:100%;
+
+    padding:12px 14px;
+
+    border-radius:12px;
+
+    border:1px solid var(--border);
+
+    background:transparent;
+
+    color:var(--text);
+
+    font-family:inherit;
+
+    font-size:.95rem;
+
+    outline:none;
+
+}
+
+.editor input:focus{
+
+    border-color:var(--accent);
+
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.buttons{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.buttons button{
+
+    flex:1;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--accent);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+    font-weight:700;
+
+    transition:.25s;
+
+}
+
+.buttons button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+#editBtn{
+
+    background:var(--border);
+
+    color:var(--text);
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:420px){
+
+    .life-progress{
+
+        padding:20px;
+
+    }
+
+}
