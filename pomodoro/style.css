@@ -1,0 +1,242 @@
+/* ==========================
+   POMODORO
+========================== */
+
+body{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+
+    background:var(--bg);
+    color:var(--text);
+
+    transition:background .3s,color .3s;
+
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.pomodoro{
+
+    position:relative;
+
+    width:340px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:32px 24px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+/* ==========================
+   THEME BUTTON
+========================== */
+
+
+
+/* ==========================
+   TITLE
+========================== */
+
+.title{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin:10px 0 32px;
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+}
+
+.title svg{
+
+    width:28px;
+    height:28px;
+
+}
+
+/* ==========================
+   DURATION
+========================== */
+
+.duration{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:34px;
+
+}
+
+.duration button{
+
+    width:42px;
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.duration button:hover{
+
+    background:var(--hover);
+
+    transform:scale(1.05);
+
+}
+
+#minutes{
+
+    width:90px;
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+}
+
+/* ==========================
+   TIMER
+========================== */
+
+.timer{
+
+    font-size:4.5rem;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    margin-bottom:40px;
+
+    user-select:none;
+
+}
+
+/* ==========================
+   CONTROLS
+========================== */
+
+.controls{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+}
+
+.controls button{
+
+    width:56px;
+    height:56px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.controls button:hover{
+
+    background:var(--hover);
+
+    transform:translateY(-2px);
+
+}
+
+.controls svg{
+
+    width:22px;
+    height:22px;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:400px){
+
+    .pomodoro{
+
+        width:100%;
+
+        margin:16px;
+
+        padding:28px 20px;
+
+    }
+
+    .timer{
+
+        font-size:3.8rem;
+
+    }
+
+}
+
+.widget-toolbar .theme-toggle {
+    line-height: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+}
+.widget-toolbar .theme-toggle svg {
+    width: 15px;
+    height: 15px;
+    display: block;
+}

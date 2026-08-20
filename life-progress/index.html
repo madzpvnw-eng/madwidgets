@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Life Progress</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Lucide -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Theme -->
+
+    <link rel="stylesheet"
+          href="../assets/css/theme.css">
+
+    <!-- Widget -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+    <div class="widget-toolbar">
+        <a href="../index.html">← MadWidgets</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme">☾</button>
+    </div>
+
+
+    <main class="life-progress">
+<!-- Title -->
+
+        <h1 class="title">
+
+            <i data-lucide="hourglass"></i>
+
+            <span>Life Progress</span>
+
+        </h1>
+
+        <!-- Dashboard -->
+
+        <section class="dashboard">
+
+            <div
+                id="age"
+                class="age">
+
+                -- Years Old
+
+            </div>
+
+            <div class="progress">
+
+                <div
+                    id="progressBar"
+                    class="progress-bar">
+
+                </div>
+
+            </div>
+
+            <div
+                id="progressPercent"
+                class="percent">
+
+                0%
+
+            </div>
+
+        </section>
+
+        <!-- Information -->
+
+        <section class="info">
+
+            <div class="card">
+
+                <i data-lucide="cake"></i>
+
+                <div>
+
+                    <small>Birthday</small>
+
+                    <strong id="birthdayText">
+
+                        -
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <i data-lucide="calendar-range"></i>
+
+                <div>
+
+                    <small>Lifespan</small>
+
+                    <strong id="lifespanText">
+
+                        100 Years
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <i data-lucide="clock-3"></i>
+
+                <div>
+
+                    <small>Remaining</small>
+
+                    <strong id="remainingText">
+
+                        -
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Form -->
+
+        <section class="editor">
+
+            <label>
+
+                Birthday
+
+                <input
+                    id="birthdayInput"
+                    type="date">
+
+            </label>
+
+            <label>
+
+                Lifespan
+
+                <input
+                    id="lifespanInput"
+                    type="number"
+                    value="100"
+                    min="1"
+                    max="150">
+
+            </label>
+
+            <div class="buttons">
+
+                <button id="saveBtn">
+
+                    Save
+
+                </button>
+
+                <button id="editBtn">
+
+                    Edit
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Theme -->
+
+
+    <!-- Widget -->
+
+    <script src="script.js"></script>
+
+    <script src="../assets/js/theme.js"></script>
+</body>
+
+</html>

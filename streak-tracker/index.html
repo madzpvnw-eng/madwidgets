@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Streak Tracker</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Lucide -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Theme -->
+
+    <link rel="stylesheet"
+          href="../assets/css/theme.css">
+
+    <!-- Widget -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+    <div class="widget-toolbar">
+        <a href="../index.html">← MadWidgets</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme">☾</button>
+    </div>
+
+
+    <main class="streak-widget">
+<!-- Header -->
+
+        <header class="header">
+
+            <h1 class="title">
+
+                <i data-lucide="flame"></i>
+
+                <span>Streak Tracker</span>
+
+            </h1>
+
+        </header>
+
+        <!-- Habit -->
+
+        <section class="habit">
+
+            <label for="habitName">
+
+                Habit
+
+            </label>
+
+            <input
+                id="habitName"
+                type="text"
+                placeholder="Read Book">
+
+        </section>
+
+        <!-- Current Streak -->
+
+        <section class="streak">
+
+            <span class="label">
+
+                Current Streak
+
+            </span>
+
+            <h2 id="streakCount">
+
+                0 Days
+
+            </h2>
+
+        </section>
+
+        <!-- Progress -->
+
+        <section class="progress">
+
+            <div class="progress-bar">
+
+                <div
+                    id="progressFill"
+                    class="progress-fill">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Last Check In -->
+
+        <section class="last-check">
+
+            <span class="label">
+
+                Last Check-In
+
+            </span>
+
+            <strong id="lastCheck">
+
+                Never
+
+            </strong>
+
+        </section>
+
+        <!-- Action -->
+
+        <button
+            id="checkInBtn"
+            class="check-btn">
+
+            Check In
+
+        </button>
+
+    </main>
+
+    <!-- Theme -->
+
+
+    <!-- Widget -->
+
+    <script src="script.js"></script>
+
+    <script src="../assets/js/theme.js"></script>
+</body>
+
+</html>
