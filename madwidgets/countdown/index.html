@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Countdown</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Lucide -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Theme -->
+
+    <link rel="stylesheet"
+          href="../assets/css/theme.css">
+
+    <!-- Widget -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+    <div class="widget-toolbar">
+        <a href="../index.html">← MadWidgets</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme">☾</button>
+    </div>
+
+
+    <main class="countdown">
+<!-- Title -->
+
+        <h1 class="title">
+
+            <i data-lucide="hourglass"></i>
+
+            <span>Countdown</span>
+
+        </h1>
+
+        <!-- Form -->
+
+        <section class="form">
+
+            <div class="field">
+
+                <label for="eventName">
+
+                    <i data-lucide="party-popper"></i>
+
+                    Event
+
+                </label>
+
+                <input
+                    type="text"
+                    id="eventName"
+                    placeholder="My Birthday">
+
+            </div>
+
+            <div class="row">
+
+                <div class="field">
+
+                    <label for="targetDate">
+
+                        <i data-lucide="calendar"></i>
+
+                        Date
+
+                    </label>
+
+                    <input
+                        type="date"
+                        id="targetDate">
+
+                </div>
+
+                <div class="field">
+
+                    <label for="targetTime">
+
+                        <i data-lucide="clock-3"></i>
+
+                        Time
+
+                    </label>
+
+                    <input
+                        type="time"
+                        id="targetTime">
+
+                </div>
+
+            </div>
+
+            <button
+                id="applyButton"
+                class="apply-button">
+
+                Apply Countdown
+
+            </button>
+
+        </section>
+
+        <!-- Event Title -->
+
+        <h2
+            id="eventTitle"
+            class="event-title">
+
+            Event Name
+
+        </h2>
+
+        <!-- Countdown -->
+
+        <section class="countdown-grid">
+
+            <div class="flip-card">
+
+                <div
+                    class="number"
+                    id="days">
+
+                    000
+
+                </div>
+
+                <div class="label">
+
+                    Days
+
+                </div>
+
+            </div>
+
+            <div class="flip-card">
+
+                <div
+                    class="number"
+                    id="hours">
+
+                    00
+
+                </div>
+
+                <div class="label">
+
+                    Hours
+
+                </div>
+
+            </div>
+
+            <div class="flip-card">
+
+                <div
+                    class="number"
+                    id="minutes">
+
+                    00
+
+                </div>
+
+                <div class="label">
+
+                    Minutes
+
+                </div>
+
+            </div>
+
+            <div class="flip-card">
+
+                <div
+                    class="number"
+                    id="seconds">
+
+                    00
+
+                </div>
+
+                <div class="label">
+
+                    Seconds
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Theme -->
+
+
+    <!-- Widget -->
+
+    <script src="script.js"></script>
+
+    <script src="../assets/js/theme.js"></script>
+</body>
+
+</html>

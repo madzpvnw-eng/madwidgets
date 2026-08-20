@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Calendar</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="../assets/css/theme.css">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+    <div class="widget-toolbar">
+        <a href="../index.html">← MadWidgets</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme">☾</button>
+    </div>
+
+
+    <main class="calendar">
+
+        <div class="header">
+
+            <button
+                class="arrow"
+                id="prev">
+
+                ‹
+
+            </button>
+
+            <div id="month"></div>
+
+            <button
+                class="arrow"
+                id="next">
+
+                ›
+
+            </button>
+
+        </div>
+
+        <div class="weekdays">
+
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+
+        </div>
+
+        <div
+            class="days"
+            id="days">
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+    <script src="../assets/js/theme.js"></script>
+</body>
+
+</html>
