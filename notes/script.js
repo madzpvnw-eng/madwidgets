@@ -1,2 +1,0 @@
-const note=document.getElementById('note'),status=document.getElementById('status');note.value=localStorage.getItem('madwidgets-note')||'';document.getElementById('save').onclick=()=>{localStorage.setItem('madwidgets-note',note.value);status.textContent='Saved locally'};document.getElementById('clear').onclick=()=>{note.value='';localStorage.removeItem('madwidgets-note');status.textContent='Cleared'};
-lucide?.createIcons?.();
