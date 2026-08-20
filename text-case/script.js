@@ -1,2 +1,0 @@
-const t=document.getElementById('text');document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{const m=b.dataset.mode,v=t.value;if(m==='upper')t.value=v.toUpperCase();if(m==='lower')t.value=v.toLowerCase();if(m==='title')t.value=v.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());if(m==='sentence')t.value=v.toLowerCase().replace(/(^|[.!?]\s+)\w/g,c=>c.toUpperCase())});
-lucide?.createIcons?.();
