@@ -39,34 +39,9 @@ function updateClock() {
 }
 
 // ==========================================
-// THEME
-// ==========================================
-
-function updateThemeButton() {
-
-    if (!themeButton) return;
-
-    themeButton.textContent =
-        getTheme() === "dark"
-            ? "☀️"
-            : "🌙";
-
-}
-
-themeButton.addEventListener("click", () => {
-
-    toggleTheme();
-
-    updateThemeButton();
-
-});
-
-// ==========================================
 // INITIALIZE
 // ==========================================
 
 updateClock();
-
-updateThemeButton();
 
 setInterval(updateClock, 1000);

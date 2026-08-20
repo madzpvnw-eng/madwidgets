@@ -1,0 +1,15 @@
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:18px;background:var(--bg);color:var(--text);font-family:"Manrope",sans-serif;transition:.25s}.widget-shell{width:min(360px,100%);position:relative}.toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.back{font-size:10px;color:var(--text-secondary);text-decoration:none}.back:hover{color:var(--text)}.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:24px;box-shadow:var(--shadow)}h1{font-size:14px;margin:0 0 4px}p{font-size:10px;color:var(--text-secondary);margin:0}.muted{color:var(--text-secondary)}
+.day-card{text-align:center}.eyebrow{font-size:9px;text-transform:uppercase;letter-spacing:.16em;color:var(--text-secondary)}.time{font-size:46px;font-weight:800;letter-spacing:-.07em;margin-top:12px}.date{font-size:10px;color:var(--text-secondary);margin-top:4px}.bar{height:9px;background:var(--border);border-radius:20px;overflow:hidden;margin-top:26px}.bar i{display:block;height:100%;width:0;background:var(--text);transition:width .5s}.meta{display:flex;justify-content:space-between;font-size:9px;color:var(--text-secondary);margin-top:7px}
+
+
+.widget-toolbar .theme-toggle {
+    line-height: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+}
+.widget-toolbar .theme-toggle svg {
+    width: 15px;
+    height: 15px;
+    display: block;
+}

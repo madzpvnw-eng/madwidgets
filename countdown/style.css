@@ -44,39 +44,7 @@ body {
    THEME
 ========================== */
 
-.theme-toggle {
 
-    position: absolute;
-
-    top: 20px;
-    right: 20px;
-
-    width: 42px;
-    height: 42px;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background: var(--bg);
-
-    color: var(--text);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    cursor: pointer;
-
-    transition: .25s;
-
-}
-
-.theme-toggle:hover {
-
-    background: var(--hover);
-
-}
 
 /* ==========================
    TITLE
@@ -362,4 +330,16 @@ body {
 
     }
 
+}
+
+.widget-toolbar .theme-toggle {
+    line-height: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+}
+.widget-toolbar .theme-toggle svg {
+    width: 15px;
+    height: 15px;
+    display: block;
 }

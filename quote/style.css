@@ -1,3 +1,4 @@
+
 /* ==========================================
    THEME
 ========================================== */
@@ -156,4 +157,17 @@ button:hover{
 
     opacity:.9;
 
+}
+
+
+.widget-toolbar .theme-toggle {
+    line-height: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+}
+.widget-toolbar .theme-toggle svg {
+    width: 15px;
+    height: 15px;
+    display: block;
 }

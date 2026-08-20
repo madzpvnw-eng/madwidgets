@@ -1,3 +1,4 @@
+
 /* ========================================
    RESET
 ======================================== */
@@ -34,15 +35,15 @@ body{
 
     width:320px;
 
-    background:#242424;
+    background:var(--surface);
 
     border-radius:24px;
 
     padding:30px;
 
-    color:#FFFFFF;
+    color:var(--text);
 
-    box-shadow:0 12px 30px rgba(0,0,0,.35);
+    box-shadow:var(--shadow);
 
 }
 
@@ -107,7 +108,7 @@ body{
     width:4px;
     height:50px;
 
-    background:#FFFFFF;
+    background:var(--text);
 
 }
 
@@ -170,7 +171,7 @@ body{
 
     font-size:15px;
 
-    color:#BDBDBD;
+    color:var(--text-secondary);
 
     margin-bottom:25px;
 
@@ -185,7 +186,7 @@ body{
     width:100%;
     height:1px;
 
-    background:#3C3C3C;
+    background:var(--border);
 
     margin-bottom:25px;
 
@@ -276,7 +277,7 @@ body{
 
     letter-spacing:3px;
 
-    color:#FFFFFF;
+    color:var(--text);
 
 }
 
@@ -307,4 +308,16 @@ body{
 
 }
 
+}
+
+.widget-toolbar .theme-toggle {
+    line-height: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+}
+.widget-toolbar .theme-toggle svg {
+    width: 15px;
+    height: 15px;
+    display: block;
 }

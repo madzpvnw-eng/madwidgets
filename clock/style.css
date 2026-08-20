@@ -48,43 +48,7 @@ body {
    THEME BUTTON
 ========================================== */
 
-.theme-toggle {
 
-    position: absolute;
-
-    top: 20px;
-
-    right: 20px;
-
-    width: 42px;
-
-    height: 42px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    border: 1px solid var(--border);
-
-    border-radius: 50%;
-
-    background: var(--bg);
-
-    color: var(--text);
-
-    cursor: pointer;
-
-    transition: all var(--transition);
-
-}
-
-.theme-toggle:hover {
-
-    background: var(--hover);
-
-}
 
 /* ==========================================
    TIME
@@ -140,4 +104,16 @@ body {
 
     }
 
+}
+
+.widget-toolbar .theme-toggle {
+    line-height: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+}
+.widget-toolbar .theme-toggle svg {
+    width: 15px;
+    height: 15px;
+    display: block;
 }
