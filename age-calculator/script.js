@@ -1,2 +1,0 @@
-const dob=document.getElementById('dob'),out=document.getElementById('age'),detail=document.getElementById('detail');document.getElementById('calc').onclick=()=>{if(!dob.value)return;const b=new Date(dob.value+'T00:00:00'),n=new Date();let y=n.getFullYear()-b.getFullYear(),m=n.getMonth()-b.getMonth(),d=n.getDate()-b.getDate();if(d<0){m--;d+=new Date(n.getFullYear(),n.getMonth(),0).getDate()}if(m<0){y--;m+=12}out.textContent=`${y} years`;detail.textContent=`${m} months · ${d} days`};
-lucide?.createIcons?.();
